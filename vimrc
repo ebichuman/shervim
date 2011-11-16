@@ -15,6 +15,20 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 
-set ts=4 sts=4 st=4 expandtab
+set ts=4 sts=4 sw=4 expandtab
 
 set number
+colorscheme railscasts2
+
+" GUI "
+if has("gui_running")
+    set guioptions-=T " no toolbar set guioptions-=m " no menus
+    set guioptions-=r " no scrollbar on the right
+    set guioptions-=R " no scrollbar on the right
+    set guioptions-=l " no scrollbar on the left
+    set guioptions-=b " no scrollbar on the bottom
+    set guioptions=aiA
+    set mouse=v
+    set guifont=Bitstream\ Vera\ Sans\ Mono:h11
+    set linespace=3
+endif
