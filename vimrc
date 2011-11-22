@@ -7,7 +7,9 @@ let mapleader=","
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
-  
+
+nmap <leader>p :NERDTreeToggle<CR>
+
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
@@ -20,10 +22,10 @@ filetype plugin indent on
 set ts=4 sts=4 sw=4 expandtab
 
 set number
-colorscheme railscasts2
 
-" GUI "
+" GUI
 if has("gui_running")
+    let g:solarized_termcolors=256
     set guioptions-=T " no toolbar set guioptions-=m " no menus
     set guioptions-=r " no scrollbar on the right
     set guioptions-=R " no scrollbar on the right
@@ -32,5 +34,8 @@ if has("gui_running")
     set guioptions=aiA
     set mouse=v
     set guifont=Bitstream\ Vera\ Sans\ Mono:h11
-    set linespace=3
+    set linespace=4
 endif
+
+set background=dark
+colorscheme solarized
