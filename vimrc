@@ -39,3 +39,5 @@ endif
 
 set background=dark
 colorscheme solarized
+
+au FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
