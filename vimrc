@@ -25,7 +25,6 @@ set number
 
 " GUI
 if has("gui_running")
-    let g:solarized_termcolors=256
     set guioptions-=T " no toolbar set guioptions-=m " no menus
     set guioptions-=r " no scrollbar on the right
     set guioptions-=R " no scrollbar on the right
@@ -38,6 +37,7 @@ if has("gui_running")
 endif
 
 set background=dark
-colorscheme solarized
+set cursorline
+colorscheme railscasts3
 
 au FileType ruby setlocal ts=2 sts=2 sw=2 expandtab

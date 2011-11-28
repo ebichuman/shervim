@@ -1,6 +1,6 @@
 " Vim color scheme
 "
-" Name:        railscast.vim
+" Name:        railscasts2.vim
 " Maintainer:  Josh O'Rourke <jorourke23@gmail.com> 
 " License:     public domain
 "
@@ -15,7 +15,7 @@ hi clear
 if exists("syntax_on")
   syntax reset
 endif
-let g:colors_name = "railscasts"
+let g:colors_name = "railscasts3"
 
 " Colors
 " Brown        #BC9458
@@ -26,12 +26,12 @@ let g:colors_name = "railscasts"
 " Light Green  #A5C261
 " Tan          #FFC66D
 
-hi Normal                    guifg=#E6E1DC guibg=#2B2B2B
-hi Cursor                    guibg=#FFFFFF
-hi CursorLine                guibg=#333435
-hi LineNr                    guifg=#888888 guibg=#DEDEDE
-hi Search                    guibg=#5A647E
-hi Visual                    guibg=#5A647E
+hi Normal                   guifg=#E6E1DC guibg=#2B2B2B
+hi Cursor                   guibg=#FFFFFF
+hi CursorLine               guibg=#262626
+hi LineNr                   guifg=#444444 guibg=#262626
+hi Search                   guibg=#5A647E
+hi Visual                   guibg=#5A647E
 
 " Folds
 " -----
@@ -56,7 +56,7 @@ hi PMenuThumb                guibg=#AAAAAA gui=NONE
 
 
 "rubyComment
-hi Comment                   guifg=#BC9458 gui=italic
+hi Comment                   guifg=#4D4D4D gui=italic
 hi Todo                      guifg=#BC9458 guibg=NONE gui=italic
 
 "rubyPseudoVariable
