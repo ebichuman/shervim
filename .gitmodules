@@ -13,3 +13,9 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
+[submodule "bundle/mirodark"]
+	path = bundle/mirodark
+	url = https://github.com/djjcast/mirodark.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
