@@ -8,7 +8,7 @@ let mapleader=","
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
 
-nmap <leader>p :NERDTreeToggle<CR>
+nmap <leader>; :NERDTreeToggle<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
@@ -16,6 +16,7 @@ set listchars=tab:▸\ ,eol:¬
 call pathogen#infect()
 
 syntax on
+filetype on
 filetype plugin indent on
 
 set ts=4 sts=4 sw=4 expandtab
@@ -39,3 +40,34 @@ if has("gui_running")
 endif
 
 au FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
+
+"snipmate setup
+try
+  source ~/.vim/snippets/support_functions.vim
+catch
+  source ~/vimfiles/snippets/support_functions.vim
+endtry
+autocmd vimenter * call s:SetupSnippets()
+function! s:SetupSnippets()
+
+    "if we're in a rails env then read in the rails snippets
+    if filereadable("./config/environment.rb")
+      try
+        call ExtractSnips("~/.vim/snippets/ruby-rails", "ruby")
+        call ExtractSnips("~/.vim/snippets/eruby-rails", "eruby")
+      catch
+        call ExtractSnips("~/vimfiles/snippets/ruby-rails", "ruby")
+        call ExtractSnips("~/vimfiles/snippets/eruby-rails", "eruby")
+      endtry
+    endif
+
+    try
+      call ExtractSnips("~/.vim/snippets/html", "eruby")
+      call ExtractSnips("~/.vim/snippets/html", "xhtml")
+      call ExtractSnips("~/.vim/snippets/html", "php")
+    catch
+      call ExtractSnips("~/vimfiles/snippets/html", "eruby")
+      call ExtractSnips("~/vimfiles/snippets/html", "xhtml")
+      call ExtractSnips("~/vimfiles/snippets/html", "php")
+    endtry
+endfunction
