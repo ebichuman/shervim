@@ -19,6 +19,3 @@
 [submodule "bundle/vim-endwise"]
 	path = bundle/vim-endwise
 	url = https://github.com/tpope/vim-endwise.git
-[submodule "snippets"]
-	path = snippets
-	url = https://github.com/akitaonrails/snipmate-snippets.git
