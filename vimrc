@@ -32,7 +32,7 @@ if has("gui_running")
     set guioptions-=b " no scrollbar on the bottom
     set guioptions=aiA
     set mouse=v
-    set guifont=Bitstream\ Vera\ Sans\ Mono:h11
+    set guifont=Bitstream\ Vera\ Sans\ Mono:h13
     set linespace=4
     set background=dark
     set cursorline
