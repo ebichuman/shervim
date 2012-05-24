@@ -15,6 +15,11 @@ set listchars=tab:▸\ ,eol:¬
 
 call pathogen#infect()
 
+let g:CommandTMaxFiles=20000
+let g:CommandTMaxHeight=10
+nnoremap <silent> <Leader>t :CommandT<CR>
+nnoremap <silent> <Leader>b :CommandTBuffer<CR>
+
 syntax on
 filetype on
 filetype plugin indent on
@@ -33,7 +38,8 @@ if has("gui_running")
     set guioptions=aiA
     set mouse=v
     set guifont=Bitstream\ Vera\ Sans\ Mono:h13
-    set linespace=4
+"    set guifont=Consolas:h13
+    set linespace=3
     set background=dark
     set cursorline
     colorscheme railscasts
