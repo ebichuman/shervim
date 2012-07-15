@@ -5,9 +5,7 @@ set encoding=utf-8 fileencoding=utf-8
 
 let mapleader=","
 
-" Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
-
 nmap <leader>; :NERDTreeToggle<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
@@ -20,13 +18,19 @@ let g:CommandTMaxHeight=10
 nnoremap <silent> <Leader>t :CommandT<CR>
 nnoremap <silent> <Leader>b :CommandTBuffer<CR>
 
+set ts=4 sts=4 sw=4 expandtab
+
 syntax on
 filetype on
 filetype plugin indent on
 
-set ts=4 sts=4 sw=4 expandtab
-
 set number
+set background=dark
+let g:solarized_termtrans = 1
+colorscheme solarized
+set guifont=Bitstream\ Vera\ Sans\ Mono:h11
+set linespace=4
+set cursorline
 
 " GUI
 if has("gui_running")
@@ -37,12 +41,6 @@ if has("gui_running")
     set guioptions-=b " no scrollbar on the bottom
     set guioptions=aiA
     set mouse=v
-    set guifont=Bitstream\ Vera\ Sans\ Mono:h13
-"    set guifont=Consolas:h13
-    set linespace=3
-    set background=dark
-    set cursorline
-    colorscheme railscasts
 endif
 
 au FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
