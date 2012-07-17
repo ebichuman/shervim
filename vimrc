@@ -9,7 +9,8 @@ nmap <leader>l :set list!<CR>
 nmap <leader>; :NERDTreeToggle<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
+" set listchars=tab:▸\ ,eol:¬,trail:•
+set listchars=tab:▸\ ,trail:•
 
 call pathogen#infect()
 
@@ -28,9 +29,12 @@ set number
 set background=dark
 let g:solarized_termtrans = 1
 colorscheme solarized
-set guifont=Bitstream\ Vera\ Sans\ Mono:h11
-set linespace=4
+" set guifont=Bitstream\ Vera\ Sans\ Mono:h11
+set guifont=Inconsolata:h13
 set cursorline
+
+let g:tagbar_usearrows = 1
+nnoremap <leader>' :TagbarToggle<CR>
 
 " GUI
 if has("gui_running")
@@ -41,6 +45,7 @@ if has("gui_running")
     set guioptions-=b " no scrollbar on the bottom
     set guioptions=aiA
     set mouse=v
+    set linespace=5
 endif
 
 au FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
