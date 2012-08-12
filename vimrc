@@ -11,6 +11,7 @@ nmap <leader>; :NERDTreeToggle<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 " set listchars=tab:▸\ ,eol:¬,trail:•
 set listchars=tab:▸\ ,trail:•
+set list
 
 call pathogen#infect()
 
@@ -36,6 +37,12 @@ set cursorline
 let g:tagbar_usearrows = 1
 nnoremap <leader>' :TagbarToggle<CR>
 
+" 80 columns line
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
+set linespace=5
+
 " GUI
 if has("gui_running")
     set guioptions-=T " no toolbar set guioptions-=m " no menus
@@ -45,7 +52,6 @@ if has("gui_running")
     set guioptions-=b " no scrollbar on the bottom
     set guioptions=aiA
     set mouse=v
-    set linespace=5
 endif
 
 au FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
